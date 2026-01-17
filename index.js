@@ -43,9 +43,10 @@ app.get('/', (req, res) => res.status(200).json({ status: 'ok' }));
 
 if (require.main === module) {
     const port = process.env.PORT || 3000;
-    app.listen(port, () => {
-        console.log(`Servidor en puerto ${port}`);
-    });
+
+app.listen(port, () => {
+    console.log(`Servidor en puerto ${port}`);
+});
 }
 
 module.exports = { app, db };
